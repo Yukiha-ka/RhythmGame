@@ -1,4 +1,4 @@
-string1_y = 640
+string1_y = 0
 bpm = 120
 
 def drawline():
@@ -10,11 +10,13 @@ def setup():
     background(0)
     size(360,640)
     frameRate(60)
-    drawline()
+
 
 def draw():
+    global string1_y,bpm
     background(0)
+    drawline()
     noStroke()
     fill(255)
-    string1_y += (bpm/10)
+    string1_y += (bpm/70)
     ellipse(180,string1_y,50,50)
